@@ -16,13 +16,13 @@ router.post('/create', function(req, res) {
   	res.redirect('/') //put a proper error message here
   }
   else {
-    fs.appendFile('data/numbers.txt',req.body.num.concat(', '), function(err) {
+    fs.appendFile('data/numbers.txt',req.body.num.concat('\n'), function(err) {
       if(err) throw err;
     });
-    fs.appendFile('data/time.txt',req.body.tim.concat(', '), function(err) {
+    fs.appendFile('data/time.txt',req.body.tim.concat('\n'), function(err) {
       if(err) throw err;
     });
-    fs.appendFile('data/minutes.txt',req.body.mins.concat(', '), function(err) {
+    fs.appendFile('data/minutes.txt',req.body.mins.concat('\n'), function(err) {
       if(err) throw err;
     });
   }
