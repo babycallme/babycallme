@@ -1,39 +1,20 @@
 var express = require('express');
+var fs = require('fs');
 var router = express.Router();
 
 router.get('/', function(req, res) {
   return res.render('index', {
-    title: 'Codeweekend Notes',
-    notes: req.session.notes
-  });
-});
-
-router.get('/:id', function(req, res) {
-  var noteId = Number(req.params.id);
-  if (isNaN(noteId) || noteId < 1 || noteId > req.session.notes.length) {
-    req.session.message = 'That note does not exist!';
-    return res.redirect('/');
-  }
-
-  return res.render('note', {
-    note: req.session.notes[noteId - 1]
+    title: 'Baby Call Me'
   });
 });
 
 router.post('/create', function(req, res) {
-  if (!(req.body.title && req.body.body)) {
-    req.session.message = 'You must provide a title and a body!';
-    return res.redirect('/');
+  if(req.body.num) {
+    fs.appendFile('db.txt',req.body.num, function(err) {
+      if(err) throw err;
+    });
   }
-
-  req.session.notes.push({
-    id: req.session.notes.length + 1,
-    title: req.body.title,
-    body: req.body.body
-  });
-
-  req.session.message = 'Note created!';
-  return res.redirect('/');
+  res.redirect('/');
 });
 
 module.exports = router;
