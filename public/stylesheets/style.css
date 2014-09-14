@@ -79,3 +79,9 @@ p#bottomunsubscribe {
 	width:5.5em;
 	height:1.2em;
 }
+
+#errormessage {
+	font-family: sans-serif, Helvetica, Arial;
+	text-align: center;
+	color:#C60808;
+}
