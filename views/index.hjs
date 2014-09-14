@@ -1,15 +1,23 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>{{ title }}</h1>
+    <img src='/images/logo.jpg' alt='Our Logo' style='width:90em;height=20em'/>
     <form action='/create' method='post'>
-      <p> Phone Number: </p>
-      <input type='text' name='num' placeholder='XXX.XXX.XXXX'><br/>
-      <input type='submit' value='Submit'>
-    </form>
+      <p style="font-size: 2em; color: #808080"> I want to leave my house at 
+        <input type='text' name='time' placeholder='8:30am' style="font-size: 1em">
+      </p>
+      <p style="font-size: 2em; color: #808080"> I take 
+        <input type='text' name='mins' placeholder='minutes' style="font-size: 1em">
+        to get ready.
+      </p>
+      <p style="font-size: 2em; color: #808080"> Phone Number 
+        <input type='text' name='num' placeholder='---.---.----' style="font-size: 1em">
+      </p>
+      <input id="submitbutton" type='submit' value='Submit' style="font-size: 1em; font-color: white" width=3.5em>
+    </form> 
   </body>
 </html>

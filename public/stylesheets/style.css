@@ -1,9 +1,15 @@
 body {
   padding-left: 50px;
   padding-top: 10px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px sans-serif, Helvetica, Arial;
+  text-align: center;
 }
-
+img {
+	padding-top: 7.5em;
+}
+input {
+	width: 8em;
+}
 a {
   color: #00B7FF;
 }

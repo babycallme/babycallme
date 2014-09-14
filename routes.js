@@ -4,7 +4,7 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
   return res.render('index', {
-    title: 'Baby Call Me'
+    title: 'babycall.me'
   });
 });
 
