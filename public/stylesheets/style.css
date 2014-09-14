@@ -5,11 +5,33 @@ body {
   text-align: center;
 }
 img {
-	padding-top: 7.5em;
+	padding-top: 5em;
 }
 input {
-	width: 8em;
+	width: 5em;
+	font-family: sans-serif, Helvetica, Arial;
 }
 a {
   color: #00B7FF;
+}
+#button {
+  padding:5px;
+  background-color: #585C5F;
+  border: 1px solid #585C5F;
+  color:#000;
+  text-decoration:none;
+  color:white;
+}
+#button:hover {
+  padding:5px;
+  background-color: #7FBCF5;
+  border: 1px solid #7FBCF5;
+  color:#000;
+  text-decoration:none;
+  color:white;
+}
+.input-no-spinner::-webkit-outer-spin-button,
+.input-no-spinner::-webkit-inner-spin-button {
+	-webkit-appearance:none;
+	margin:0;
 }
