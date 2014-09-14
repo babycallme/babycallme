@@ -8,10 +8,10 @@
     <img src='/images/logo.jpg' alt='Our Logo' style='width:90em;height=20em'/>
     <form action='/create' method='post'>
       <p style="font-size: 2em; color: #808080"> I want to leave my house at 
-        <input type='time' name='time' style="font-size: 1em">
+        <input type='time' name='tim' value="12:00" style="font-size: 1em" class="input-no-spinner">
       </p>
       <p style="font-size: 2em; color: #808080"> I take 
-        <input type='number' name='mins' placeholder='minutes' style="font-size: 1em">
+        <input type='number' name='mins' placeholder='minutes' style="font-size: 1em" class="input-no-spinner">
         to get ready.
       </p>
       <p style="font-size: 2em; color: #808080"> Phone Number 
