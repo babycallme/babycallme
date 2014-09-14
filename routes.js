@@ -9,14 +9,20 @@ router.get('/', function(req, res) {
 });
 
 router.post('/create', function(req, res) {
-  if(!req.body.num) {
+  if(!req.body.num || !req.body.mins || !req.body.tim) {
   	res.redirect('/') //put a proper error message here
   }
-  else if(req.body.num && req.body.num.length!=10) {
+  else if(req.body.num.length!=10) {
   	res.redirect('/') //put a proper error message here
   }
   else {
-    fs.appendFile('db.txt',req.body.num.concat(', '), function(err) {
+    fs.appendFile('data/numbers.txt',req.body.num.concat(', '), function(err) {
+      if(err) throw err;
+    });
+    fs.appendFile('data/time.txt',req.body.tim.concat(', '), function(err) {
+      if(err) throw err;
+    });
+    fs.appendFile('data/minutes.txt',req.body.mins.concat(', '), function(err) {
       if(err) throw err;
     });
   }
