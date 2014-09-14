@@ -9,21 +9,13 @@ router.get('/', function(req, res) {
 });
 
 router.post('/create', function(req, res) {
-  if(!req.body.num || !req.body.mins || !req.body.time) {
+  if(!req.body.num) {
   	res.redirect('/') //put a proper error message here
   }
   else if(req.body.num && req.body.num.length!=10) {
   	res.redirect('/') //put a proper error message here
   }
   else {
-    fs.appendFile('data/db.txt',req.body.num.concat(', '), function(err) {
-      if(err) throw err;
-    });
-
-    fs.appendFile('db.txt',req.body.num.concat(', '), function(err) {
-      if(err) throw err;
-    });
-
     fs.appendFile('db.txt',req.body.num.concat(', '), function(err) {
       if(err) throw err;
     });
