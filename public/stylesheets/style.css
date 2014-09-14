@@ -85,3 +85,9 @@ p#bottomunsubscribe {
 	text-align: center;
 	color:#C60808;
 }
+
+#successmessage {
+	font-family: sans-serif, Helvetica, Arial;
+	text-align: center;
+	color:#17CA62;
+}
