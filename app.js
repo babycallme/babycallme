@@ -19,6 +19,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 var routes = require('./routes');
 app.use('/', routes);
 
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+// Handle any errors by rendering the error page
+app.use(function(err, req, res, next) {
+  res.status(err.status || 500);
+  res.render('error', {
+    errorMessage: err.message,
+    error: app.get('env') === 'development' ? err : {}
+  });
+});
+
 app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
 });
